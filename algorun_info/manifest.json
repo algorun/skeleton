@@ -1,5 +1,5 @@
 {
-    	"manifest_version": "1.1",
+	"manifest_version": "1.2",
 	"algo_name": "N/A", // the name of your algorithm
 	"algo_summary": "N/A", // a 1-line summary of your algorithm
 	"algo_description": "N/A", // a few lines description of your algorithm (basic html accepted)
@@ -25,11 +25,12 @@
 	],
 	"algo_exec": "ruby test.rb", // the command to start algorithm execution. AlgoRun passes the input file as the first argument
 	"algo_input_stream": "direct", // "file" if the algorithm reads input from a file (filename is passed as the first command line argument), "direct" if the algorithm input is passed directly as a parameter in the command line, or "stdin" if input is passed through stdin using '<'. Default: direct
-    "algo_output_stream": "stdout", // path of the file where your algorithm outputs its results or "stdout" if your algorithm prints the results to the standard output stream. Default: stdout
+	"algo_output_stream": "stdout", // path of the file where your algorithm outputs its results or "stdout" if your algorithm prints the results to the standard output stream. Default: stdout
 	"algo_parameters": { // list all the parameters available for your algorithm. These parameters will be available for use in your algorithm as environment variables.
 		"PARAM1": "default_value",
 		"PARAM2": "default_value"
 	},
 	"input_type": "algorun:custom", // if your algorithm is compatible with other algorithms on AlgoRun, mention the input type it accepts here. Example: "algorun:superadam". leave the default value otherwise.
+	"output_type": "algorun:custom", // if your algorithm is compatible with other algorithms on AlgoRun, mention the output type it produces here. Example: "algorun:superadam". leave the default value otherwise.
 	"algo_image": "" // Example: "ahosny/react". leave "" if you did not upload your algorithm to docker hub or if you do not know what docker hub is :).
 }
