@@ -3,7 +3,7 @@
 	"algo_name": "N/A", // the name of your algorithm
 	"algo_summary": "N/A", // a 1-line summary of your algorithm
 	"algo_description": "N/A", // a few lines description of your algorithm (basic html accepted)
-	"algo_website": "http://algorun.org", // url where users can find more information about your algorithm
+	"algo_website": "http://algorun.org", // url where users can find more information about your algorithm and/or a link to a tutorial or manual to run the algorithm
 	"algo_keywords": [], // a list of keywords describing your algorithm
 	"published_paper": { // if you already have a published paper for your algorithm. leave blank if not.
             "title": "",
