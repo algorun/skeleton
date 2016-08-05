@@ -1,5 +1,5 @@
 {
-   	"manifest_version": "1.3",
+   	"manifest_version": "1.4",
 	"algo_name": "N/A", // the name of your algorithm
 	"algo_summary": "N/A", // a 1-line summary of your algorithm
 	"algo_description": "N/A", // a few lines description of your algorithm (basic html accepted)
@@ -34,10 +34,17 @@
             "profile_picture": "",
             "organization": "John Doe University", 
             "org_website": "http://johndoe.edu" 
-    },
-	"algo_exec": "ruby test.rb", // the command to start algorithm execution. AlgoRun passes the input file as the first argument
-	"algo_input_stream": "direct", // "file" if the algorithm reads input from a file (filename is passed as the first command line argument), "direct" if the algorithm input is passed directly as a parameter in the command line, or "stdin" if input is passed through stdin using '<'. Default: direct
-    "algo_output_stream": "stdout", // path of the file where your algorithm outputs its results or "stdout" if your algorithm prints the results to the standard output stream. Default: stdout
+	},
+	"algo_exec": "ruby test.rb $input1 $input2", // the command to start algorithm execution. Use "$" to mark an input to be passed to the command.
+	"algo_inputs": { // list all input parameters and their types. Key is input name, where names mut match the names in the command above, and value is input type
+		"input1": "direct", // text or number passed immediately in the command-line
+		"input2": "file" // if the algorithm reads input from a file. AlgoRun passes the file name here
+	},
+	"algo_outputs": { // list all output produced by your algorithm. Key is file name and value is file type
+		"output1.txt": "text", // output file named "output1.txt" is text
+		"output-visualization.png": "image", // output file named "output-visualization.png" should be displayed as image
+		"output-log": "stdout" // get the output of the standard output stream
+	},
 	"algo_parameters": { // list all the parameters available for your algorithm. These parameters will be available for use in your algorithm as environment variables.
 		"PARAM1": "default_value",
 		"PARAM2": "default_value"
