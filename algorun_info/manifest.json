@@ -1,5 +1,5 @@
 {
-   	"manifest_version": "1.4",
+   	"manifest_version": "2.0",
 	"algo_name": "N/A", // the name of your algorithm
 	"algo_version": "1.0.0", // the versuib of your algorithm
 	"algo_summary": "N/A", // a 1-line summary of your algorithm
@@ -36,11 +36,12 @@
             "organization": "John Doe University", 
             "org_website": "http://johndoe.edu" 
 	},
+	"caching": "on", // the default caching scheme of your algorithms (on/off).
 	// all "type" keys listed below expect a value to be one of MIME types: https://www.sitepoint.com/web-foundations/mime-types-complete-list/
 	"algo_exec": "ruby test.rb $input1 $input2", // the command to start algorithm execution. Use "$" to mark an input to be passed to the command.
 	"algo_input": [ // list all input parameters and their types. Names must match the names in the command above.
 		{ "name": "input1", "src": "direct", "type": "text/plain", "accepted_format": "algorun/undefined" }, // text or number passed immediately in the command-line
-		{ "name": "input2", "src": "file", "type": "text/plain", "accepted_format": "algorun/undefined" } // if the algorithm reads input from a file. AlgoRun passes the file name here
+		{ "name": "input2", "src": "direct", "type": "text/plain", "accepted_format": "algorun/undefined" } // if the algorithm reads input from a file. AlgoRun passes the file name here
 	],
 	"algo_output": [ // list all output produced by your algorithm. "result_format" is used on the AlgoPiper wesbsite for input/output types listing
 		{ "name": "output1", "src": "output1.txt", "type": "text/plain", "format": "algorun/undefined" }, // output file named "output1.txt" is text
