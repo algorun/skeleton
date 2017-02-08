@@ -40,7 +40,7 @@
 	"algo_exec": "ruby test.rb $input1 $input2", // the command to start algorithm execution. Use "$" to mark an input to be passed to the command.
 	"algo_input": [ // list all input parameters and their types. Names must match the names in the command above.
 		{ "name": "input1", "src": "direct", "type": "text/plain", "accepted_format": "algorun/undefined" }, // text or number passed immediately in the command-line
-		{ "name": "input2", "src": "direct", "type": "text/plain", "accepted_format": "algorun/undefined" } // if the algorithm reads input from a file. AlgoRun passes the file name here
+		{ "name": "input2", "src": "file", "type": "text/plain", "accepted_format": "algorun/undefined" } // if the algorithm reads input from a file. AlgoRun passes the file name here
 	],
 	"algo_output": [ // list all output produced by your algorithm. "result_format" is used on the AlgoPiper wesbsite for input/output types listing
 		{ "name": "output1", "src": "output1.txt", "type": "text/plain", "format": "algorun/undefined" }, // output file named "output1.txt" is text
@@ -48,7 +48,7 @@
 		{ "name": "output-log", "src": "stdout", "type": "text/plain", "format": "algorun/undefined" } // get the output of the standard output stream
 	],
 	"algo_parameters": { // list all the parameters available for your algorithm. These parameters will be available for use in your algorithm as environment variables,
-		"caching": "on", // the default caching scheme of your algorithms (on/off).
+		"caching": "on" // the default caching scheme of your algorithms (on/off).
 	},
 	"algo_image": "" // Example: "ahosny/react". leave "" if you did not upload your algorithm to docker hub or if you do not know what docker hub is :).
 }
