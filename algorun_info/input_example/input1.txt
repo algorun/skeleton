@@ -1,1 +1,1 @@
-Put an example of the input format your algorithm accepts.
+input1_example_direct

@@ -1,1 +1,1 @@
-Put an example of the output format your algorithm accepts.
+Put an example of the output your algorithm produces.

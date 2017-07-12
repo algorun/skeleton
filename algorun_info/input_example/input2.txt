@@ -1,1 +1,1 @@
-Put an example of the input format your algorithm accepts.
+input2_example_file
